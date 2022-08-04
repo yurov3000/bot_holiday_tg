@@ -23,5 +23,7 @@ async def send_holidays(message: types.Message):
     holiday_link = scrap.get_links(url="https://www.calend.ru/")
     await message.reply(f'И так, праздники на сегодня и завтра:\n\n{holiday[0]}\n{holiday_link[0]}\n\n{holiday[1]}\n{holiday_link[1]}\n\nСпасибо за предоставленную информацию сайту https://www.calend.ru/')
 
+# start polling
 if __name__ == '__main__':
     executor.start_polling(dp, skip_updates=False)
+
